@@ -37,7 +37,7 @@ function postCat(cat){
 }
 
 function gettAllCats(){
-    $.get('/api/cats', (response)=>{
+    $.get('/api/cat', (response)=>{
         //response data is in Array format
         if (response.statusCode === 200){
             addCards(response.data);
@@ -52,4 +52,5 @@ $(document).ready(function(){
     });
     $('.modal').modal();
     gettAllCats();
+    console.log('ready');
 });
