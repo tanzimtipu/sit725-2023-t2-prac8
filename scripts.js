@@ -45,6 +45,11 @@ function gettAllCats(){
     });
 }
 
+let socket = io();
+socket.on('number', (message)=>{
+    console.log('Random Number: ' + message);
+})
+
 $(document).ready(function(){
     $('.materialboxed').materialbox();
     $('#formSubmit').click(()=>{
